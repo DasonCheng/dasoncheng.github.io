@@ -5,6 +5,75 @@ date: 2020-11-20 18:35:47
 
 ## Request
 
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using DasonCheng.DotNet.Tesingo.Models;
+using DasonCheng.DotNet.Tesingo.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+
+namespace DasonCheng.DotNet.Tesingo.Controllers
+{
+    [ApiController]
+    [Route("[controller]")]
+    public class EngineController : ControllerBase
+    {
+        [HttpGet]
+        public async Task<Config> Source()
+        {
+            return await Utils.Ecg.engine.Source("sdfsd");
+        }
+
+        [HttpGet("range")]
+        public PositionRange GetRangeByPosition([FromQuery] QueryPositionDto query)
+        {
+            var range = Utils.Ecg.engine.GetRangeByPosition(query.Position, query.Size);
+            return range;
+        }
+
+        [HttpGet("template")]
+        public Dictionary<BeatType, List<Beat>> GetTemplate()
+        {
+            var template = Utils.Ecg.engine.Template();
+            return template;
+        }
+
+        [HttpGet("slice")]
+        public IEnumerable<Beat> GetSlice([FromQuery] QuerySliceDto query)
+        {
+            return Utils.Ecg.engine.Slice(query.Start, query.End);
+        }
+
+        [HttpGet("line")]
+        public IEnumerable<Point> GetLines([FromQuery] QueryLineDto query)
+        {
+            return Utils.Ecg.engine.Lines(query.Start, query.Size);
+        }
+
+        [HttpPost("add")]
+        public void Add(QueryAddOrUpdateDto query)
+        {
+            Utils.Ecg.engine.Add(query.Index, query.Type);
+        }
+
+        [HttpPut("update")]
+        public void Update(QueryAddOrUpdateDto query)
+        {
+            Utils.Ecg.engine.Update(query.Index, query.Type);
+        }
+
+        [HttpDelete("remove")]
+        public void Remove([FromQuery] QueryRemoveDto query)
+        {
+            Utils.Ecg.engine.Remove(query.Index);
+        }
+    }
+}
+```
+
 ![Alt text here](./photo-159.jpeg)
 
 ## Implament

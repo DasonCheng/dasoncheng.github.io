@@ -3,7 +3,6 @@
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
-  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -14,15 +13,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@deckdeckgo/highlight-code": "^2.2.1",
     "gatsby": "^2.26.1",
     "gatsby-plugin-sass": "^2.6.0",
     "gatsby-plugin-sharp": "^2.9.0",
     "gatsby-remark-copy-linked-files": "^2.5.0",
-    "gatsby-remark-highlight-code": "^2.1.0",
     "gatsby-remark-images": "^3.6.0",
     "gatsby-remark-prismjs": "^3.8.0",
-    "gatsby-remark-vscode": "^3.2.0",
     "gatsby-source-filesystem": "^2.6.1",
     "gatsby-transformer-remark": "^2.11.0",
     "prismjs": "^1.22.0",
@@ -33,12 +29,5 @@
   "devDependencies": {
     "prettier": "2.1.2",
     "sass": "^1.29.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

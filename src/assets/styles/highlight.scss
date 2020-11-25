@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Cascadia Code";
-  src: url("/fonts/cascadia-code/ttf/CascadiaCode.ttf") format("truetype"),
-    url("/fonts/cascadia-code/woff2/CascadiaCode.woff2") format("woff");
+  src: url("/fonts/cascadia-code/CascadiaCode.ttf") format("truetype"),
+    url("/fonts/cascadia-code/CascadiaCode.woff2") format("woff");
 }
 
 .gatsby-highlight {
@@ -24,6 +24,7 @@
         "Liberation Mono", "Courier New", monospace;
       font-size: 100%;
       line-height: 1.5;
+      color: #00398f;
       background-color: transparent;
     }
   }
@@ -46,6 +47,12 @@
         "Liberation Mono", "Courier New", monospace;
       line-height: 1;
     }
+  }
+
+  pre[class="language-csharp"]::before {
+    content: "cs";
+    color: #fff;
+    background: #008b20;
   }
 
   pre[class="language-typescript"]::before,
@@ -78,20 +85,32 @@
 .token {
   display: inline;
 
+  &.namespace,
+  &.class-name,
+  &.builtin {
+    color: #008e6f;
+  }
+
   &.atrule,
   &.attr-value,
-  &.keyword,
-  &.class-name {
-    color: #096fb3;
+  &.keyword {
+    color: #a31589;
+  }
+
+  &.operator,
+  &.punctuation {
+    color: #232129;
+  }
+
+  &.string {
+    color: #d88e73;
   }
 
   &.selector,
   &.attr-name,
-  &.string,
   &.char,
-  &.function,
-  &.builtin {
-    color: #b94185;
+  &.function {
+    color: #b8a500;
   }
 
   &.comment,

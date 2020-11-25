@@ -1207,19 +1207,6 @@
   resolved "https://registry.npm.taobao.org/@csstools/normalize.css/download/@csstools/normalize.css-10.1.0.tgz#f0950bba18819512d42f7197e56c518aa491cf18"
   integrity sha1-8JULuhiBlRLUL3GX5WxRiqSRzxg=
 
-"@deckdeckgo/highlight-code@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.npm.taobao.org/@deckdeckgo/highlight-code/download/@deckdeckgo/highlight-code-2.2.1.tgz#93aaddd5745dd936800479b880f50f5220167f1a"
-  integrity sha1-k6rd1XRd2TaABHm4gPUPUiAWfxo=
-  dependencies:
-    "@deckdeckgo/utils" "1.3.0"
-    prismjs "^1.21.0"
-
-"@deckdeckgo/utils@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/@deckdeckgo/utils/download/@deckdeckgo/utils-1.3.0.tgz#3c99ddd16d729e1cf695c6dd41ce4b617dc0b1a1"
-  integrity sha1-PJnd0W1ynhz2lcbdQc5LYX3AsaE=
-
 "@endemolshinegroup/cosmiconfig-typescript-loader@3.0.2":
   version "3.0.2"
   resolved "https://registry.npm.taobao.org/@endemolshinegroup/cosmiconfig-typescript-loader/download/@endemolshinegroup/cosmiconfig-typescript-loader-3.0.2.tgz?cache=0&sync_timestamp=1599309682055&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40endemolshinegroup%2Fcosmiconfig-typescript-loader%2Fdownload%2F%40endemolshinegroup%2Fcosmiconfig-typescript-loader-3.0.2.tgz#eea4635828dde372838b0909693ebd9aafeec22d"
@@ -3692,7 +3679,7 @@ base64-arraybuffer@0.1.5:
   resolved "https://registry.npm.taobao.org/base64-arraybuffer/download/base64-arraybuffer-0.1.5.tgz#73926771923b5a19747ad666aa5cd4bf9c6e9ce8"
   integrity sha1-c5JncZI7Whl0etZmqlzUv5xunOg=
 
-base64-js@^1.0.2, base64-js@^1.2.3, base64-js@^1.3.1:
+base64-js@^1.0.2, base64-js@^1.3.1:
   version "1.5.1"
   resolved "https://registry.npm.taobao.org/base64-js/download/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha1-GxtEAWClv3rUC2UPCVljSBkDkwo=
@@ -7601,15 +7588,6 @@ gatsby-link@^2.6.0:
     "@types/reach__router" "^1.3.6"
     prop-types "^15.7.2"
 
-gatsby-node-helpers@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.npm.taobao.org/gatsby-node-helpers/download/gatsby-node-helpers-0.3.0.tgz#3bdca3b7902a702a5834fef280ad66d51099d57c"
-  integrity sha1-O9yjt5AqcCpYNP7ygK1m1RCZ1Xw=
-  dependencies:
-    json-stringify-safe "^5.0.1"
-    lodash "^4.17.4"
-    p-is-promise "^1.1.0"
-
 gatsby-page-utils@^0.4.0:
   version "0.4.0"
   resolved "https://registry.npm.taobao.org/gatsby-page-utils/download/gatsby-page-utils-0.4.0.tgz#1a0364a8c26dc4585ac9999dab4e4458a4cf0466"
@@ -7775,16 +7753,6 @@ gatsby-remark-copy-linked-files@^2.5.0:
     probe-image-size "^5.0.0"
     unist-util-visit "^1.4.1"
 
-gatsby-remark-highlight-code@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npm.taobao.org/gatsby-remark-highlight-code/download/gatsby-remark-highlight-code-2.1.0.tgz#f8d266e6d139465a9fd8f17a3bf3e5a20c02c2d0"
-  integrity sha1-+NJm5tE5Rlqf2PF6O/PlogwCwtA=
-  dependencies:
-    gatsby-node-helpers "^0.3.0"
-    lodash "^4.17.15"
-    mdast-util-to-string "^1.1.0"
-    unist-util-visit "^2.0.2"
-
 gatsby-remark-images@^3.6.0:
   version "3.6.0"
   resolved "https://registry.npm.taobao.org/gatsby-remark-images/download/gatsby-remark-images-3.6.0.tgz#f8cdc70a19b650ccbd7602a5798dbc181d744933"
@@ -7810,19 +7778,6 @@ gatsby-remark-prismjs@^3.8.0:
     "@babel/runtime" "^7.12.5"
     parse-numeric-range "^0.0.2"
     unist-util-visit "^1.4.1"
-
-gatsby-remark-vscode@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npm.taobao.org/gatsby-remark-vscode/download/gatsby-remark-vscode-3.2.0.tgz#7e16b71c7a3c7b711b64cb541250d8175c98ed77"
-  integrity sha1-fha3HHo8e3EbZMtUElDYF1yY7Xc=
-  dependencies:
-    decompress "^4.2.0"
-    json5 "^2.1.1"
-    loglevel "^1.6.4"
-    plist "^3.0.1"
-    unist-util-visit "^1.4.1"
-    vscode-oniguruma "^1.4.0"
-    vscode-textmate "^5.2.0"
 
 gatsby-source-filesystem@^2.6.1:
   version "2.6.1"
@@ -10517,7 +10472,7 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
-json5@^2.1.1, json5@^2.1.2:
+json5@^2.1.2:
   version "2.1.3"
   resolved "https://registry.npm.taobao.org/json5/download/json5-2.1.3.tgz#c9b0f7fa9233bfe5807fe66fcf3a5617ed597d43"
   integrity sha1-ybD3+pIzv+WAf+ZvzzpWF+1ZfUM=
@@ -10882,7 +10837,7 @@ logalot@^2.0.0, logalot@^2.1.0:
     figures "^1.3.5"
     squeak "^1.0.0"
 
-loglevel@^1.6.4, loglevel@^1.6.8:
+loglevel@^1.6.8:
   version "1.7.0"
   resolved "https://registry.npm.taobao.org/loglevel/download/loglevel-1.7.0.tgz?cache=0&sync_timestamp=1598447642950&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Floglevel%2Fdownload%2Floglevel-1.7.0.tgz#728166855a740d59d38db01cf46f042caa041bb0"
   integrity sha1-coFmhVp0DVnTjbAc9G8ELKoEG7A=
@@ -12695,15 +12650,6 @@ pkg-up@3.1.0:
   dependencies:
     find-up "^3.0.0"
 
-plist@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.npm.taobao.org/plist/download/plist-3.0.1.tgz#a9b931d17c304e8912ef0ba3bdd6182baf2e1f8c"
-  integrity sha1-qbkx0XwwTokS7wujvdYYK68uH4w=
-  dependencies:
-    base64-js "^1.2.3"
-    xmlbuilder "^9.0.7"
-    xmldom "0.1.x"
-
 pngjs@^3.0.0, pngjs@^3.3.3:
   version "3.4.0"
   resolved "https://registry.npm.taobao.org/pngjs/download/pngjs-3.4.0.tgz?cache=0&sync_timestamp=1603548657875&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fpngjs%2Fdownload%2Fpngjs-3.4.0.tgz#99ca7d725965fb655814eaf65f38f12bbdbf555f"
@@ -13543,7 +13489,7 @@ pretty-format@^26.6.0, pretty-format@^26.6.2:
     ansi-styles "^4.0.0"
     react-is "^17.0.1"
 
-prismjs@^1.21.0, prismjs@^1.22.0:
+prismjs@^1.22.0:
   version "1.22.0"
   resolved "https://registry.npm.taobao.org/prismjs/download/prismjs-1.22.0.tgz#73c3400afc58a823dd7eed023f8e1ce9fd8977fa"
   integrity sha1-c8NACvxYqCPdfu0CP44c6f2Jd/o=
@@ -17110,16 +17056,6 @@ vm-browserify@^1.0.1:
   resolved "https://registry.npm.taobao.org/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
 
-vscode-oniguruma@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.npm.taobao.org/vscode-oniguruma/download/vscode-oniguruma-1.4.0.tgz#3795fd1ef9633a4a33f208bce92c008e64a6fc8f"
-  integrity sha1-N5X9HvljOkoz8gi86SwAjmSm/I8=
-
-vscode-textmate@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.npm.taobao.org/vscode-textmate/download/vscode-textmate-5.2.0.tgz#01f01760a391e8222fe4f33fbccbd1ad71aed74e"
-  integrity sha1-AfAXYKOR6CIv5PM/vMvRrXGu104=
-
 w3c-hr-time@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/w3c-hr-time/download/w3c-hr-time-1.0.2.tgz#0a89cdf5cc15822df9c360543676963e0cc308cd"
@@ -17695,11 +17631,6 @@ xml2js@^0.4.5:
     sax ">=0.6.0"
     xmlbuilder "~11.0.0"
 
-xmlbuilder@^9.0.7:
-  version "9.0.7"
-  resolved "https://registry.npm.taobao.org/xmlbuilder/download/xmlbuilder-9.0.7.tgz#132ee63d2ec5565c557e20f4c22df9aca686b10d"
-  integrity sha1-Ey7mPS7FVlxVfiD0wi35rKaGsQ0=
-
 xmlbuilder@~11.0.0:
   version "11.0.1"
   resolved "https://registry.npm.taobao.org/xmlbuilder/download/xmlbuilder-11.0.1.tgz#be9bae1c8a046e76b31127726347d0ad7002beb3"
@@ -17709,11 +17640,6 @@ xmlchars@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npm.taobao.org/xmlchars/download/xmlchars-2.2.0.tgz#060fe1bcb7f9c76fe2a17db86a9bc3ab894210cb"
   integrity sha1-Bg/hvLf5x2/ioX24apvDq4lCEMs=
-
-xmldom@0.1.x:
-  version "0.1.31"
-  resolved "https://registry.npm.taobao.org/xmldom/download/xmldom-0.1.31.tgz?cache=0&sync_timestamp=1603759594536&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fxmldom%2Fdownload%2Fxmldom-0.1.31.tgz#b76c9a1bd9f0a9737e5a72dc37231cf38375e2ff"
-  integrity sha1-t2yaG9nwqXN+WnLcNyMc84N14v8=
 
 xmlhttprequest-ssl@~1.5.4:
   version "1.5.5"
