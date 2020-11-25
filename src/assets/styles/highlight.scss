@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Cascadia Code";
+  src: url("/fonts/cascadia-code/ttf/CascadiaCode.ttf") format("truetype"),
+    url("/fonts/cascadia-code/woff2/CascadiaCode.woff2") format("woff");
+}
+
+.gatsby-highlight {
+  position: relative;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #36313d;
+  background: #fdfaf6;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  pre {
+    code {
+      display: block;
+      min-width: 100%;
+      padding: 0px 2em;
+      font-family: "Cascadia Code", SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+      font-size: 100%;
+      line-height: 1.5;
+      background-color: transparent;
+    }
+  }
+
+  pre[class*="language-"] {
+    background-color: transparent;
+    border: 0px;
+    padding: 30px 0px 20px;
+
+    &::before {
+      position: absolute;
+      top: 0px;
+      left: 2em;
+      border-radius: 0px 0px 4px 4px;
+      padding: 6px 10px;
+      text-align: right;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-family: "Cascadia Code", SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+      line-height: 1;
+    }
+  }
+
+  pre[class="language-typescript"]::before,
+  pre[class="language-ts"]::before {
+    content: "ts";
+    color: #fff;
+    background: #3077c6;
+  }
+
+  pre[class="language-javascript"]::before,
+  pre[class="language-js"]::before {
+    content: "js";
+    color: #232129;
+    background: rgb(247, 223, 30);
+  }
+
+  pre[class="language-css"]::before {
+    content: "css";
+    color: #fff;
+    background: #32a9e0;
+  }
+
+  pre[class="language-scss"]::before {
+    content: "scss";
+    color: #fff;
+    background: #ce689b;
+  }
+}
+
+.token {
+  display: inline;
+
+  &.atrule,
+  &.attr-value,
+  &.keyword,
+  &.class-name {
+    color: #096fb3;
+  }
+
+  &.selector,
+  &.attr-name,
+  &.string,
+  &.char,
+  &.function,
+  &.builtin {
+    color: #b94185;
+  }
+
+  &.comment,
+  &.block-comment,
+  &.prolog,
+  &.doctype,
+  &.cdata {
+    color: #527713;
+  }
+}
