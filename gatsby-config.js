@@ -12,7 +12,7 @@ module.exports = {
       options: {
         implementation: require("sass"),
         // sassRuleTest: /\.global\.s(a|c)ss$/,
-        // sassRuleModulesTest: /\.mod\.s(a|c)ss$/,
+        sassRuleModulesTest: /\.module\.s(a|c)ss$/,
       },
     },
     {
@@ -27,6 +27,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-code-titles`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -37,6 +38,7 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
           },
           `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-responsive-iframe`,
         ],
       },
     },

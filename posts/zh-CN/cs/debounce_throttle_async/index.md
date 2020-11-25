@@ -5,7 +5,7 @@ date: 2020-11-20 18:35:47
 
 ## Request
 
-```csharp
+```csharp:title=engine.cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -74,11 +74,17 @@ namespace DasonCheng.DotNet.Tesingo.Controllers
 }
 ```
 
+is designed to work seamlessly with Gatsby’s native image processing capabilities powered by GraphQL and Sharp.
+
 ![Alt text here](./photo-159.jpeg)
+
+is designed to work seamlessly with Gatsby’s native image processing capabilities powered by GraphQL and Sharp.
 
 ## Implament
 
-```typescript
+is designed to work seamlessly with Gatsby’s native image processing capabilities powered by GraphQL and Sharp.
+
+```typescript:title=tree.ts
 export enum Color {
   Red,
   Black,
@@ -130,7 +136,16 @@ export interface IRedBlackTree<T> {
 }
 ```
 
-```javascript
+is designed to work seamlessly with Gatsby’s native image processing capabilities powered by GraphQL and Sharp.
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Check Switch" src="https://codepen.io/aaroniker/embed/preview/qBNvKjE?height=265&theme-id=dark&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/aaroniker/pen/qBNvKjE'>Check Switch</a> by Aaron Iker
+  (<a href='https://codepen.io/aaroniker'>@aaroniker</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+is designed to work seamlessly with Gatsby’s native image processing capabilities powered by GraphQL and Sharp.
+
+```javascript:title=layout.js
 import Header from "gatsby-theme-amazing/src/components/header"
 // these props are the same as the original component would get
 export default function MyHeader(props) {
@@ -139,7 +154,9 @@ export default function MyHeader(props) {
 const msg = "" === "hello"
 ```
 
-```scss
+is designed to work seamlessly with Gatsby’s native image processing capabilities powered by GraphQL and Sharp.
+
+```scss:title=common.scss
 html {
   p {
     color: white;
@@ -147,11 +164,17 @@ html {
 }
 ```
 
-```css
+is designed to work seamlessly with Gatsby’s native image processing capabilities powered by GraphQL and Sharp.
+
+```css:title=global.css
 html {
   color: white;
 }
 ```
+
+is designed to work seamlessly with Gatsby’s native image processing capabilities powered by GraphQL and Sharp.
+
+is designed to work seamlessly with Gatsby’s native image processing capabilities powered by GraphQL and Sharp.
 
 ## Reference
 

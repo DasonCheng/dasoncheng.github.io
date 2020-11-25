@@ -7739,6 +7739,14 @@ gatsby-recipes@^0.4.0:
     xstate "^4.9.1"
     yoga-layout-prebuilt "^1.9.6"
 
+gatsby-remark-code-titles@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/gatsby-remark-code-titles/download/gatsby-remark-code-titles-1.1.0.tgz#1b7246e4ac78669c1ca7c18ea70c3dd11fede139"
+  integrity sha1-G3JG5Kx4Zpwcp8GOpww90R/t4Tk=
+  dependencies:
+    query-string "~6.0.0"
+    unist-util-visit "~1.3.0"
+
 gatsby-remark-copy-linked-files@^2.5.0:
   version "2.5.0"
   resolved "https://registry.npm.taobao.org/gatsby-remark-copy-linked-files/download/gatsby-remark-copy-linked-files-2.5.0.tgz#7620c1d08587a8a39ffdf647c1135656f0af1b5e"
@@ -7777,6 +7785,17 @@ gatsby-remark-prismjs@^3.8.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
     parse-numeric-range "^0.0.2"
+    unist-util-visit "^1.4.1"
+
+gatsby-remark-responsive-iframe@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.npm.taobao.org/gatsby-remark-responsive-iframe/download/gatsby-remark-responsive-iframe-2.6.0.tgz#2fcd0a63e696b637b81321773efc27b187aeb332"
+  integrity sha1-L80KY+aWtje4EyF3PvwnsYeuszI=
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    cheerio "^1.0.0-rc.3"
+    common-tags "^1.8.0"
+    lodash "^4.17.20"
     unist-util-visit "^1.4.1"
 
 gatsby-source-filesystem@^2.6.1:
@@ -13710,6 +13729,14 @@ query-string@^6.13.1, query-string@^6.13.3:
     split-on-first "^1.0.0"
     strict-uri-encode "^2.0.0"
 
+query-string@~6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npm.taobao.org/query-string/download/query-string-6.0.0.tgz?cache=0&sync_timestamp=1604609929956&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fquery-string%2Fdownload%2Fquery-string-6.0.0.tgz#8b8f39447b73e8290d6f5e3581779218e9171142"
+  integrity sha1-i485RHtz6CkNb141gXeSGOkXEUI=
+  dependencies:
+    decode-uri-component "^0.2.0"
+    strict-uri-encode "^2.0.0"
+
 querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.npm.taobao.org/querystring-es3/download/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -16636,7 +16663,7 @@ unist-util-generated@^1.1.0:
   resolved "https://registry.npm.taobao.org/unist-util-generated/download/unist-util-generated-1.1.6.tgz?cache=0&sync_timestamp=1604331648681&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Funist-util-generated%2Fdownload%2Funist-util-generated-1.1.6.tgz#5ab51f689e2992a472beb1b35f2ce7ff2f324d4b"
   integrity sha1-WrUfaJ4pkqRyvrGzXyzn/y8yTUs=
 
-unist-util-is@^2.0.0:
+unist-util-is@^2.0.0, unist-util-is@^2.1.1:
   version "2.1.3"
   resolved "https://registry.npm.taobao.org/unist-util-is/download/unist-util-is-2.1.3.tgz?cache=0&sync_timestamp=1604050883151&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Funist-util-is%2Fdownload%2Funist-util-is-2.1.3.tgz#459182db31f4742fceaea88d429693cbf0043d20"
   integrity sha1-RZGC2zH0dC/OrqiNQpaTy/AEPSA=
@@ -16733,6 +16760,13 @@ unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
     unist-util-visit-parents "^3.0.0"
+
+unist-util-visit@~1.3.0:
+  version "1.3.1"
+  resolved "https://registry.npm.taobao.org/unist-util-visit/download/unist-util-visit-1.3.1.tgz?cache=0&sync_timestamp=1594459623892&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Funist-util-visit%2Fdownload%2Funist-util-visit-1.3.1.tgz#c019ac9337a62486be58531bc27e7499ae7d55c7"
+  integrity sha1-wBmskzemJIa+WFMbwn50ma59Vcc=
+  dependencies:
+    unist-util-is "^2.1.1"
 
 universalify@^0.1.0:
   version "0.1.2"

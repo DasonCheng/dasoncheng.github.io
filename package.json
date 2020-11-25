@@ -5,9 +5,8 @@
   "version": "0.1.0",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
@@ -16,9 +15,11 @@
     "gatsby": "^2.26.1",
     "gatsby-plugin-sass": "^2.6.0",
     "gatsby-plugin-sharp": "^2.9.0",
+    "gatsby-remark-code-titles": "^1.1.0",
     "gatsby-remark-copy-linked-files": "^2.5.0",
     "gatsby-remark-images": "^3.6.0",
     "gatsby-remark-prismjs": "^3.8.0",
+    "gatsby-remark-responsive-iframe": "^2.6.0",
     "gatsby-source-filesystem": "^2.6.1",
     "gatsby-transformer-remark": "^2.11.0",
     "prismjs": "^1.22.0",

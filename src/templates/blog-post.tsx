@@ -6,16 +6,13 @@ import styles from "./blog-post.module.scss"
 export default function BlogPost({ data }) {
   const { previous, next, markdownRemark: post } = data
   return (
-    <div className="blog-post-container">
+    <div>
       <main className={styles.main}>
         <h1>{post.frontmatter.title}</h1>
         <p>{post.frontmatter.date}</p>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <section dangerouslySetInnerHTML={{ __html: post.html }} />
       </main>
-      <nav className="blog-post-nav">
+      <nav>
         <ul
           style={{
             display: `flex`,
