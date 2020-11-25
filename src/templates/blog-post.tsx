@@ -1,44 +1,19 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import styles from "./blog-post.module.scss"
+import { Layout } from "../layout/layout"
 
 export default function BlogPost({ data }) {
   const { previous, next, markdownRemark: post } = data
   return (
-    <div>
+    <Layout>
       <main className={styles.main}>
         <h1>{post.frontmatter.title}</h1>
         <p>{post.frontmatter.date}</p>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
       </main>
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
-    </div>
+    </Layout>
   )
 }
 

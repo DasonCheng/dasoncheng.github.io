@@ -1,0 +1,9 @@
+@import "../assets/styles/variable.scss";
+
+.layout {
+  :global {
+    main {
+      min-height: calc(100vh - #{$header-height} - #{$footer-height});
+    }
+  }
+}

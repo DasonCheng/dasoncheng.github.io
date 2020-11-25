@@ -1,0 +1,15 @@
+@import "../../assets/styles/variable.scss";
+
+.footer {
+  display: flex;
+  height: $footer-height;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  :global {
+    .links {
+      font-size: 14px;
+    }
+  }
+}

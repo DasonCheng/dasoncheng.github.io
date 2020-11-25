@@ -2,13 +2,10 @@ import React from "react"
 
 import { Layout } from "../layout/layout"
 
-export default function Home() {
+export default function Archives() {
   return (
     <Layout>
-      <p>sdfsd</p>
-      <p>sdfsd</p>
-      <p>sdfsd</p>
-      <p>sdfsd</p>
+      <p>Archives</p>
     </Layout>
   )
 }

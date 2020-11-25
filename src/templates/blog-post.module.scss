@@ -1,4 +1,39 @@
-main {
-  width: 800px;
-  margin: 0 auto;
+.main {
+  text-align: justify;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(115, 115, 115, 0.08);
+
+  @media only screen and (max-width: 820px) {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  @media only screen and (min-width: 820px) {
+    max-width: 800px;
+    padding: 40px 60px 70px;
+    margin: 30px auto 60px;
+  }
+
+  :global {
+    ol,
+    ul {
+      padding-left: 1.5em;
+    }
+
+    h2 {
+      margin: 1em 0;
+    }
+
+    p {
+      line-height: 1.6;
+      margin: 1em 0;
+    }
+
+    blockquote {
+      padding: 2px 8px;
+      border-left: 3px solid #eaeaea;
+      margin: 1em 0;
+      background-color: #f9f9f9;
+    }
+  }
 }
