@@ -4,6 +4,8 @@
     url("/fonts/cascadia-code/CascadiaCode.woff2") format("woff");
 }
 
+$code-gap: 2em;
+
 .gatsby-highlight {
   position: relative;
   margin: 20px 0;
@@ -23,7 +25,7 @@
       display: block;
       float: left;
       min-width: 100%;
-      padding: 0px 2em;
+      padding: 0px $code-gap;
       font-family: "Cascadia Code", SFMono-Regular, Menlo, Monaco, Consolas,
         "Liberation Mono", "Courier New", monospace;
       font-size: 100%;
@@ -41,7 +43,7 @@
     &::before {
       position: absolute;
       top: 0px;
-      left: 2em;
+      left: $code-gap;
       border-radius: 0px 0px 4px 4px;
       padding: 6px 10px;
       text-align: right;
@@ -53,42 +55,94 @@
     }
   }
 
-  pre[class*="language-csharp"]::before {
+  pre[class*="language-csharp"]::before,
+  pre[class*="language-diff-csharp"]::before {
     content: "cs";
     color: #fff;
     background: #008b20;
   }
 
   pre[class*="language-typescript"]::before,
-  pre[class*="language-ts"]::before {
+  pre[class*="language-diff-typescript"]::before,
+  pre[class*="language-ts"]::before,
+  pre[class*="language-diff-ts"]::before {
     content: "ts";
     color: #fff;
     background: #3077c6;
   }
 
   pre[class*="language-javascript"]::before,
-  pre[class*="language-js"]::before {
+  pre[class*="language-diff-javascript"]::before,
+  pre[class*="language-js"]::before,
+  pre[class*="language-diff-js"]::before {
     content: "js";
     color: #232129;
     background: rgb(247, 223, 30);
   }
 
-  pre[class*="language-css"]::before {
+  pre[class*="language-css"]::before,
+  pre[class*="language-diff-css"]::before {
     content: "css";
     color: #fff;
     background: #32a9e0;
   }
 
-  pre[class*="language-scss"]::before {
+  pre[class*="language-scss"]::before,
+  pre[class*="language-diff-scss"]::before {
     content: "scss";
     color: #fff;
     background: #ce689b;
   }
 
-  pre[class*="language-html"]::before {
+  pre[class*="language-html"]::before,
+  pre[class*="language-diff-html"]::before {
     content: "html";
     color: #fff;
     background: #f53f01;
+  }
+
+  pre[class*="language-graphql"]::before,
+  pre[class*="language-diff-graphql"]::before {
+    content: "graphql";
+    color: #fff;
+    background: #df0298;
+  }
+
+  pre[class*="language-rust"]::before,
+  pre[class*="language-diff-rust"]::before {
+    content: "rust";
+    color: #fff;
+    background: #f74b01;
+  }
+
+  pre[class*="language-py"]::before,
+  pre[class*="language-diff-py"]::before {
+    content: "python";
+    color: #fff;
+    background: #1f72a5;
+  }
+
+  pre[class*="language-go"]::before,
+  pre[class*="language-diff-go"]::before {
+    content: "go";
+    color: #fff;
+    background: #35afdb;
+  }
+
+  pre[class*="language-pug"]::before,
+  pre[class*="language-diff-pug"]::before {
+    content: "pug";
+    color: #fff;
+    background: #5c3128;
+  }
+
+  pre[class*="language-yml"]::before,
+  pre[class*="language-diff-yml"]::before,
+  pre[class*="language-yaml"]::before,
+  pre[class*="language-diff-yaml"]::before {
+    content: "yaml";
+    color: #fff;
+    background: #f4dd6f;
   }
 }
 
@@ -131,6 +185,49 @@
   &.cdata {
     color: #527713;
   }
+
+  &.deleted-sign {
+    position: relative;
+    display: block;
+    &::before {
+      position: absolute;
+      content: "";
+      left: -$code-gap;
+      right: -$code-gap;
+      height: 100%;
+      background-color: #ff00002f;
+      pointer-events: none;
+    }
+
+    .prefix.deleted {
+      position: absolute;
+      right: 100%;
+      width: $code-gap;
+      text-align: center;
+      user-select: none;
+    }
+  }
+  &.inserted-sign {
+    position: relative;
+    display: block;
+    &::before {
+      position: absolute;
+      content: "";
+      left: -$code-gap;
+      right: -$code-gap;
+      height: 100%;
+      background-color: #00ff482f;
+      pointer-events: none;
+    }
+
+    .prefix.inserted {
+      position: absolute;
+      right: 100%;
+      width: $code-gap;
+      text-align: center;
+      user-select: none;
+    }
+  }
 }
 
 .gatsby-code-title {
@@ -144,4 +241,14 @@
   color: #866c5b;
   background: #fdfaf6;
   box-sizing: border-box;
+}
+
+.gatsby-highlight-code-line {
+  background: #fbf0ea;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 16px;
+  padding-right: 20px;
+  border-left: 3px solid #f1beb6;
+  display: block;
 }
