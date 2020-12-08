@@ -4,6 +4,86 @@ date: 2020-12-10
 tags: [graphql, restful]
 ---
 
+## 概述
+
+graphql 是由 Facebook 开源的下一代接口标准
+
+## 社区实现
+
+- Apollo
+-
+
+## 小程序实现
+
+由于小程序无法使用`XMLHttpRequest`和`fetch`等标准库函数，需要包装各平台提供的网络请求工具模拟实现`fetch`。
+
+```typescript:title=/src/tools/fetch.ts
+import Taro from "@tarojs/taro"
+
+export function fetch(url: string, init?: RequestInit) {
+  const textDecoder = new TextDecoder("utf-8")
+  return new Promise<Response>((resolve, reject) => {
+    const option: Taro.request.Option<any> = {
+      url,
+      method: init.method as "GET" | "POST" | "PUT" | "DELETE",
+      header: init.headers,
+      data: init.body,
+      responseType: "arraybuffer",
+      success: res => {
+        resolve({
+          body: res.data,
+          json: () => Promise.resolve(JSON.parse(textDecoder.decode(res.data))),
+          text: () => Promise.resolve(textDecoder.decode(res.data)),
+        } as Response)
+      },
+      fail: err => {
+        reject(err)
+      },
+    }
+
+    Taro.request(option)
+  })
+}
+```
+
+```typescript:title=/src/services/common.service.ts
+import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client"
+import { fetch } from "../tools/fetch"
+
+export const client = new ApolloClient({
+  link: new HttpLink({
+    uri: "https://48p1r2roz4.sse.codesandbox.io",
+    fetch,
+  }),
+  cache: new InMemoryCache(),
+})
+```
+
+```typescript
+import { gql } from "@apollo/client"
+import { client } from "../services/common.service"
+
+interface Rate {
+  currency: string
+}
+
+client
+  .query<{
+    rates: Rate[]
+  }>({
+    query: gql`
+      query GetRates {
+        rates(currency: "USD") {
+          currency
+        }
+      }
+    `,
+  })
+  .then(result => {
+    console.log(result.data)
+  })
+```
+
 ## 案例
 
 ```diff-csharp
@@ -270,3 +350,4 @@ html(lang="en")
 1. [graphql](https://graphql.org/)
 1. [graphql-dotnet](https://graphql-dotnet.github.io/docs)
 1. [ASP.NET Core 中使用 GraphQL](https://www.cnblogs.com/lwqlun/p/9955901.html)
+1. [杨旭](https://www.cnblogs.com/cgzl/p/9741516.html)
